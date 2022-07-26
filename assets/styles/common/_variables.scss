@@ -1,0 +1,27 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         #27ae60;
+
+//font
+	
+$menu-font: 'CantarellRegular', Fallback, sans-serif;
+$menu-font-size: 16px;
+
+$basefont: $menu-font;
+$basefont-size: $menu-font-size;
+
+$desktop_header_height: 132px;
+$mobile_header_height: 45px;
+
+//footer checkbox
+
+$activeColor: #27ae60; //green
+$darkenColor: darken($activeColor, 20%);
+/* $background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/13460/dark_wall.png'); */
+$background: #3498db;

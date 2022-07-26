@@ -1,0 +1,207 @@
+header{
+		position: absolute;
+		z-index: 2;
+		height:	$desktop_header_height;
+		width: 100%;
+		background: rgba(20,17,13,0.8);
+		.container{
+			.nav-primary{
+				&.navbar{
+					background-color: transparent;
+					border-color: transparent;
+				}
+				text-align: center;
+				.brand{
+					background-image: url(../images/logo.png);
+					background-position: center;
+					margin: 0 auto;
+					width: 203px;
+					height: 83px;
+					position: absolute;
+					margin-top: 64px;
+					margin-left: 50%;
+					cursor: pointer;
+					transform: translateX(-50%) translateY(-50%);
+				}
+				ul{
+					li{
+						list-style-type: none;
+						a{
+							color: #BE9F57;
+							cursor: pointer;
+							font-size: $menu-font-size;
+							text-transform: uppercase;
+							text-decoration: none;
+							font-family: $menu-font;
+							&.selected{
+								border-bottom: 2px solid #BE9F57;
+								padding-bottom: 2px;
+							}
+						}
+					}
+				}
+				.lang-select{
+					text-transform: uppercase;
+					font-family: $menu-font;
+					color: #BE9F57;
+					margin-right: 10px;
+					margin-top: 10px;
+					a{	
+						color: #BE9F57;
+						text-decoration: none;
+						opacity: 0.7;
+						&.active-language{
+							opacity: 1;
+						}
+					}
+					span{
+						margin: 0 10px;
+					}
+				}
+			}		
+		}
+}
+
+@media all and (min-width: $screen-lg-min){
+	nav.navbar{
+		.menu-button{
+			display: none;
+		}
+		
+		#menu{
+			display: block!important;
+			li{
+				margin-top: 88px;
+				float: left;
+				&.left{
+					&:first-of-type{
+							margin-right: 46px;
+							margin-left: -41px;
+							padding-left: 8px;
+							
+					}
+				}
+				&.right{
+					&:first-of-type{
+						margin-right: 46px;
+						margin-left: 646px;
+						padding-left: 8px;
+					}
+				}
+			}
+		}
+		.lang-select{
+			position: absolute;
+			right: 0;
+		}
+	}
+}
+
+@media all and (max-width: $screen-lg-min - 1){
+	header{
+		height: $mobile_header_height;
+		.container{
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			nav.navbar{
+				.brand{
+					width: 153px;
+					height: 63px;
+					background-image: url(../images/mobile_logo.png);
+					margin-top: $mobile_header_height / 2;
+					cursor: pointer;
+				}
+				.menu-button{
+					width: 34px;
+					height: 30px;
+					background: url(../images/menuIcon.png);
+					position: absolute;
+					border: none;
+					left: 6%;
+					margin-top: $mobile_header_height / 2;
+					transform: translateY(-50%);
+					border: none;
+					outline:none;
+				}
+				#menu{
+					display:none;
+					padding-left: 0;
+					margin-top: 65px;
+					background:  #BE9F57;
+					li{
+						padding-top: 14px;
+						padding-bottom: 14px;
+						border-bottom: 1px solid #9C8348;
+						a{
+							color: #000;
+						}
+					}
+				}
+			}
+			.nav-primary .lang-select{
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin-top: 44px;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	
+	header{
+		height: 70px;
+	}
+	header .container nav.navbar{
+		.menu-button{
+			transform: scale(0.7) translateY(-20%) translateX(-70%);
+		}
+		
+		.brand{
+			transform: scale(0.7) translateX(-70%) translateY(-50%);
+		}
+		
+		.lang-select{
+			transform: scale(0.7) translateY(-150%);
+		}
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min--moz-device-pixel-ratio: 1.5),
+	   only screen and (min-device-pixel-ratio: 1.5) {
+	
+	header{
+		.container{
+			.nav-primary{
+				.brand{
+					background-image: url(../images/logo@2.png);
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min--moz-device-pixel-ratio: 1.5),
+	   only screen and (min-device-pixel-ratio: 1.5) and (max-width: $screen-lg-min) {
+
+	header{
+		.container{
+			.nav-primary{
+				.brand{
+					background-image: url(../images/mobile_logo@2.png);
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+				.menu-button{
+					background-image: url(../images/menuIcon@2.png);
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+}

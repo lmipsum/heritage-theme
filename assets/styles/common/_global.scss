@@ -1,0 +1,51 @@
+body:not(#tinymce){
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+ a:not(".info-email"), button{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a{
+	text-decoration: none;
+	color: #BE9F57;
+	&:hover, &:focus{
+		color: #BE9F57;
+	}
+}
+
+footer {
+	a, a:hover, a:focus {
+		color: #000;
+	}
+}
+
+body > .wrap.container-fluid{
+	flex: 1;
+	.content{
+		.main{
+			height: 100%;
+		}
+	}
+}
+
+@font-face {
+  font-family: 'CantarellRegular';
+  src: url(../fonts/Cantarell-Regular-webfont.eot), /* IE9 Compat Modes */
+		url(../fonts/Cantarell-Regular-webfont.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+		url(../fonts/Cantarell-Regular-webfont.woff) format('woff'), /* Pretty Modern Browsers */
+		url(../fonts/Cantarell-Regular-webfont.ttf)  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'ItaliannoRegular';
+  src: url(../fonts/Italianno-Regular-OTF.otf),
+		url(../fonts/Italianno-Regular.ttf)  format('truetype'), /* Safari, Android, iOS */
+}
